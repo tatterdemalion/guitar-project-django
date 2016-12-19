@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block "content" %}
+<div class="font">Song Chords</div>
+<div>Artist Name : {{object.artistname}}</div>
+<div>Song Name : {{object.songname}}</div>
+<div>Chord Number : {{object.howmanychords}}</div>
+<img class="chordimg" src="{{ object.songchord1.url }}">
+<img class="chordimg" src="{{ object.songchord2.url }}">
+<img class="chordimg" src="{{ object.songchord3.url }}">
+
+
+{% if object.songchord4 %}
+<img class="chordimg" src="{{ object.songchord4.url }}">
+
+{% endif %}
+{% if object.songchord5 %}
+<img class="chordimg" src="{{ object.songchord5.url }}">
+
+{% endif %}
+{% if object.songchord6 %}
+<img class="chordimg" src="{{ object.songchord6.url }}">
+
+{% endif %}
+
+<div>Strumming Pattern : {{object.strummingpattern}}</div>
+
+{% endblock %}

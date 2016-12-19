@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block "content" %}
+<div class="font">Hello beginner</div>
+{% for songname in object_list %}
+<div><a href="{{ songname.get_absolute_url }}"> {{ songname }} </a></div>
+{% endfor %}
+{% endblock %}
+
